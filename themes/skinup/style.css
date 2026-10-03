@@ -1,0 +1,22 @@
+/*
+Theme Name: SkinUp
+Description: Custom theme for SkinUp men's skincare
+Version: 0.1.0
+Text Domain: skinup
+*/
+:root {
+  --bg: #F4F2EC;
+  --surface: #FFFFFF;
+  --text: #171817;
+  --muted: #6F716B;
+  --accent: #6F7652;
+  --border: #DDDDD5;
+  --radius: 8px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; }
+a { color: inherit; }
+.site-header, .site-footer { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); }
+.site-footer { border-top: 1px solid var(--border); border-bottom: 0; color: var(--muted); }
+main { max-width: 72rem; margin: 0 auto; padding: 2rem 1.25rem; }
