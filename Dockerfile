@@ -1,7 +1,9 @@
 FROM wordpress:php8.3-apache
 
-RUN a2dismod mpm_event mpm_worker 2>/dev/null || true \
- && a2enmod mpm_prefork
+RUN rm -f /etc/apache2/mods-enabled/mpm_*.load /etc/apache2/mods-enabled/mpm_*.conf \
+ && ln -s /etc/apache2/mods-available/mpm_prefork.load /etc/apache2/mods-enabled/mpm_prefork.load \
+ && ln -s /etc/apache2/mods-available/mpm_prefork.conf /etc/apache2/mods-enabled/mpm_prefork.conf \
+ && apache2ctl -M | grep mpm
 
 COPY . /var/www/html/
 
