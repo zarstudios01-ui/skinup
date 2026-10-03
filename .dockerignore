@@ -1,0 +1,8 @@
+.git
+.github
+wp-config.php
+wp-config.bak
+skinup.sql
+wp-content.zip
+*.log
+.DS_Store
