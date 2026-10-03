@@ -1,5 +1,6 @@
 wp-config.php
-.env
+wp-config.bak
+skinup.sql
+wp-content.zip
 *.log
 .DS_Store
-node_modules/
